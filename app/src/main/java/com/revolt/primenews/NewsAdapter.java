@@ -44,29 +44,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.RecyclerViewHo
         holder.nameTextView.setText(currentTeacher.getName());
         //holder.descriptionTextView.setText(currentTeacher.getDescription());
         holder.dateTextView.setText(currentTeacher.getDate());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.nameTextView.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("teachers_uploads")
-                                .child(currentTeacher.getKey()).removeValue();
-
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
         Picasso.get()
                 .load(currentTeacher.getImageUrl())
                 .fit()
@@ -81,7 +58,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.RecyclerViewHo
             View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener {
         public TextView nameTextView,descriptionTextView,dateTextView;
         public ImageView teacherImageView;
-        public ImageButton imageButton,viewnews,delete;
+        public ImageButton imageButton,viewnews;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
@@ -91,7 +68,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.RecyclerViewHo
             teacherImageView = itemView.findViewById(R.id.teacherImageView);
             imageButton=itemView.findViewById(R.id.newsshare1);
             viewnews=itemView.findViewById(R.id.shownews);
-            delete=itemView.findViewById(R.id.delete);
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -99,7 +75,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.RecyclerViewHo
                     final String pdescription = teachers.get(getAdapterPosition()).getDescription();
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     sharingIntent.setType("text/plain");
-                    String shareBody = pTitle + "\n" + pdescription + "\n" /*+ "To download the app from playstore"+"\n"+"http://play.google.com/store/apps/details?id=" + view.getContext().getPackageName()*/;
+                    String shareBody = pTitle + "\n" + "\n" +pdescription + "\n" +"\n" + "To download the app from playstore"+"\n"+"\n" +"http://play.google.com/store/apps/details?id=" + view.getContext().getPackageName();
                     sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Prime News");
                     sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                     mContext.startActivity(Intent.createChooser(sharingIntent, "Share news via"));

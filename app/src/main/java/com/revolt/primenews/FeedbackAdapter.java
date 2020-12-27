@@ -24,29 +24,7 @@ public class FeedbackAdapter extends FirebaseRecyclerAdapter<Feedback,FeedbackAd
     protected void onBindViewHolder(@NonNull final FeedbackAdapter.myviewholder myviewholder, final int position, @NonNull Feedback announcements) {
         myviewholder.name.setText(announcements.getName());
         myviewholder.place.setText(announcements.getText());
-        myviewholder.deleteAnn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(myviewholder.name.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Feedback_upload")
-                                .child(getRef(position).getKey()).removeValue();
 
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
     }
 
     @NonNull
@@ -58,12 +36,10 @@ public class FeedbackAdapter extends FirebaseRecyclerAdapter<Feedback,FeedbackAd
 
     class myviewholder extends RecyclerView.ViewHolder{
         TextView name,place;
-        ImageButton deleteAnn;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.titleann);
             place=itemView.findViewById(R.id.descann);
-            deleteAnn=itemView.findViewById(R.id.delete);
 
         }
     }

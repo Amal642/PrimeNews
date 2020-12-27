@@ -25,29 +25,7 @@ public class Annadapter extends FirebaseRecyclerAdapter<Announcements, Annadapte
     protected void onBindViewHolder(@NonNull final myviewholder myviewholder, final int position, @NonNull Announcements announcements) {
         myviewholder.title.setText(announcements.getTitle());
         myviewholder.description.setText(announcements.getDescription());
-        myviewholder.deleteAnn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(myviewholder.title.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Ann_upload")
-                                .child(getRef(position).getKey()).removeValue();
 
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
     }
 
     @NonNull
@@ -64,7 +42,7 @@ public class Annadapter extends FirebaseRecyclerAdapter<Announcements, Annadapte
         super(itemView);
         title=itemView.findViewById(R.id.titleann);
         description=itemView.findViewById(R.id.descann);
-        deleteAnn=itemView.findViewById(R.id.delete);
+
 
     }
 }

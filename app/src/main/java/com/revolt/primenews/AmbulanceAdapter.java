@@ -1,72 +1,74 @@
 package com.revolt.primenews;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AmbulanceAdapter extends FirebaseRecyclerAdapter<Emergency,AmbulanceAdapter.myviewholder> {
-    public AmbulanceAdapter(@NonNull FirebaseRecyclerOptions<Emergency> options) {
-        super(options);
+import java.util.List;
+
+public class AmbulanceAdapter extends RecyclerView.Adapter<AmbulanceAdapter.RecyclerViewHolder> {
+    private Context mContext;
+    private List<Emergency> teachers;
+    public AmbulanceAdapter(Context context, List<Emergency> uploads) {
+        mContext = context;
+        teachers = uploads;
     }
+
 
     @Override
-    protected void onBindViewHolder(@NonNull final AmbulanceAdapter.myviewholder myviewholder, final int position, @NonNull Emergency announcements) {
-        myviewholder.name.setText(announcements.getName());
-        myviewholder.place.setText(announcements.getPlace());
-        myviewholder.num.setText(announcements.getPhn());
-        myviewholder.deleteAnn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(myviewholder.name.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Ambulance_upload")
-                                .child(getRef(position).getKey()).removeValue();
-
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
+    public AmbulanceAdapter.RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(mContext).inflate(R.layout.row_model4, parent, false);
+        return new AmbulanceAdapter.RecyclerViewHolder(v);
     }
-
-    @NonNull
     @Override
-    public AmbulanceAdapter.myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_model4,parent,false);
-        return new AmbulanceAdapter.myviewholder(view);
-    }
+    public void onBindViewHolder(final AmbulanceAdapter.RecyclerViewHolder holder, int position) {
+        final Emergency currentTeacher = teachers.get(position);
+        holder.nameTextView.setText(currentTeacher.getName());
+        holder.placee.setText(currentTeacher.getPlace());
+        holder.time.setText(currentTeacher.getPhn());
 
-    class myviewholder extends RecyclerView.ViewHolder{
-        TextView name,place,num;
-        ImageButton deleteAnn;
-        public myviewholder(@NonNull View itemView) {
+
+    }
+    @Override
+    public int getItemCount() {
+        return teachers.size();
+    }
+    public class RecyclerViewHolder extends RecyclerView.ViewHolder{
+        public TextView nameTextView,placee,time;
+        public ImageButton call;
+
+        public RecyclerViewHolder(View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.titleann);
-            place=itemView.findViewById(R.id.descann);
-            num=itemView.findViewById(R.id.phoneann);
-            deleteAnn=itemView.findViewById(R.id.delete);
+            nameTextView =itemView.findViewById ( R.id.titleann);
+            placee=itemView.findViewById(R.id.descann);
+            time=itemView.findViewById(R.id.phoneann);
+            call=itemView.findViewById(R.id.call);
+            call.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    final String pdescription = teachers.get(getAdapterPosition()).getPhn();
+                    Intent i = new Intent(Intent.ACTION_DIAL);
+                    i.setData(Uri.parse("tel:"+pdescription));
+                    mContext.startActivity(i);
+                }
+            });
+
 
         }
-}
+
+
+
+    }
 }

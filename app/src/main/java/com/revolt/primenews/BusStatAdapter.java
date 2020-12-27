@@ -38,31 +38,6 @@ public class BusStatAdapter extends RecyclerView.Adapter<BusStatAdapter.Recycler
     public void onBindViewHolder(final BusStatAdapter.RecyclerViewHolder holder, int position) {
         final Busstations currentTeacher = teachers.get(position);
         holder.nameTextView.setText(currentTeacher.getName());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.nameTextView.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Bus_Stations")
-                                .child(currentTeacher.getKey()).removeValue();
-                        FirebaseDatabase.getInstance().getReference().child("Bus_Stationss")
-                                .child(currentTeacher.getKey()).removeValue();
-
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
 
     }
     @Override
@@ -80,7 +55,6 @@ public class BusStatAdapter extends RecyclerView.Adapter<BusStatAdapter.Recycler
             super(itemView);
             nameTextView =itemView.findViewById ( R.id.titleann);
             view=itemView.findViewById(R.id.showlink);
-            delete=itemView.findViewById(R.id.delete);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

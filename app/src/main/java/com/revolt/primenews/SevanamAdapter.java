@@ -36,31 +36,7 @@ public class SevanamAdapter extends RecyclerView.Adapter<SevanamAdapter.Recycler
     public void onBindViewHolder(final SevanamAdapter.RecyclerViewHolder holder, int position) {
         final Taxi currentTeacher = teachers.get(position);
         holder.nameTextView.setText(currentTeacher.getName());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.nameTextView.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Sevanam")
-                                .child(currentTeacher.getKey()).removeValue();
-                        FirebaseDatabase.getInstance().getReference().child("Sevanams")
-                                .child(currentTeacher.getKey()).removeValue();
 
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
 
     }
     @Override
@@ -72,12 +48,11 @@ public class SevanamAdapter extends RecyclerView.Adapter<SevanamAdapter.Recycler
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView nameTextView;
-        public ImageButton delete,show;
+        public ImageButton show;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
             nameTextView =itemView.findViewById ( R.id.titleann);
-            delete=itemView.findViewById(R.id.delete);
             show=itemView.findViewById(R.id.showlink);
             show.setOnClickListener(new View.OnClickListener() {
                 @Override

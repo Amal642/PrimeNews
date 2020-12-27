@@ -32,29 +32,7 @@ public class LinkAdapter extends FirebaseRecyclerAdapter<Link,LinkAdapter.myview
     protected void onBindViewHolder(@NonNull final LinkAdapter.myviewholder myviewholder, final int position, @NonNull Link announcements) {
         myviewholder.name.setText(announcements.getText());
         myviewholder.link=announcements.getLink();
-        myviewholder.deleteAnn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(myviewholder.name.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Link_upload")
-                                .child(getRef(position).getKey()).removeValue();
 
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
 
     }
 
@@ -76,11 +54,10 @@ public class LinkAdapter extends FirebaseRecyclerAdapter<Link,LinkAdapter.myview
     class myviewholder extends RecyclerView.ViewHolder{
         TextView name;
         String link;
-        ImageButton deleteAnn,showlink;
+        ImageButton showlink;
         public myviewholder(@NonNull final View itemView, final OnItemClickListener listener) {
             super(itemView);
             name=itemView.findViewById(R.id.titleann);
-            deleteAnn=itemView.findViewById(R.id.delete);
             showlink=itemView.findViewById(R.id.showlink);
 
             showlink.setOnClickListener(new View.OnClickListener() {

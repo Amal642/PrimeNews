@@ -42,30 +42,7 @@ public class BAdapter extends RecyclerView.Adapter<BAdapter.RecyclerViewHolder>{
         holder.busclass.setText(currentTeacher.getBclass());
         holder.route.setText(currentTeacher.getBroute());
         holder.time.setText(currentTeacher.getBtime());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.nameTextView.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Bus_Stationss").child(entity)
-                                .child(currentTeacher.getId()).removeValue();
-                        Toast.makeText(mContext, "deleted", Toast.LENGTH_SHORT).show();
 
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
 
     }
     @Override
@@ -74,7 +51,6 @@ public class BAdapter extends RecyclerView.Adapter<BAdapter.RecyclerViewHolder>{
     }
     public class RecyclerViewHolder extends RecyclerView.ViewHolder{
         public TextView nameTextView,service,time,route,busclass;
-        public ImageButton delete;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
@@ -83,7 +59,6 @@ public class BAdapter extends RecyclerView.Adapter<BAdapter.RecyclerViewHolder>{
             time=itemView.findViewById(R.id.bustime);
             route=itemView.findViewById(R.id.busroute);
             busclass=itemView.findViewById(R.id.busclass);
-            delete=itemView.findViewById(R.id.delete);
 
         }
 

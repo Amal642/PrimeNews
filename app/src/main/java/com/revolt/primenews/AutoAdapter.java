@@ -41,30 +41,7 @@ public class AutoAdapter extends  RecyclerView.Adapter<AutoAdapter.RecyclerViewH
         holder.nameTextView.setText(currentTeacher.getBusname());
         holder.placee.setText(currentTeacher.getBservice());
         holder.time.setText(currentTeacher.getBtime());
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(holder.nameTextView.getContext());
-                builder.setTitle("Delete");
-                builder.setMessage("Sure to proceed?");
-                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Auto_Stationss").child(entity)
-                                .child(currentTeacher.getId()).removeValue();
-                        Toast.makeText(mContext, "deleted", Toast.LENGTH_SHORT).show();
 
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.show();
-            }
-        });
 
     }
     @Override
@@ -73,14 +50,13 @@ public class AutoAdapter extends  RecyclerView.Adapter<AutoAdapter.RecyclerViewH
     }
     public class RecyclerViewHolder extends RecyclerView.ViewHolder{
         public TextView nameTextView,placee,time;
-        public ImageButton delete,call;
+        public ImageButton call;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
             nameTextView =itemView.findViewById ( R.id.titleann);
             placee=itemView.findViewById(R.id.descann);
             time=itemView.findViewById(R.id.phoneann);
-            delete=itemView.findViewById(R.id.delete);
             call=itemView.findViewById(R.id.call);
             call.setOnClickListener(new View.OnClickListener() {
                 @Override
