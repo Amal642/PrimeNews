@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -235,6 +237,34 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+         getMenuInflater().inflate(R.menu.main_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
 
+         switch (item.getItemId()){
+             case R.id.shareapp:
+                 Intent sharingintent=new Intent(Intent.ACTION_SEND);
+                 sharingintent.setType("text/plain");
+                 String Sharebody="To Download The App Pls Click"+"\n"+"\n"+"http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName();
+                 String Sharesubject="";
+
+                 sharingintent.putExtra(Intent.EXTRA_TEXT,Sharebody);
+                 sharingintent.putExtra(Intent.EXTRA_SUBJECT,Sharesubject);
+
+                 startActivity(Intent.createChooser(sharingintent,"Share Using"));
+
+
+                 break;
+
+         }
+
+
+        return super.onOptionsItemSelected(item);
+    }
 }
