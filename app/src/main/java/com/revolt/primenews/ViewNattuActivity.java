@@ -99,10 +99,13 @@ public class ViewNattuActivity extends AppCompatActivity implements NattuAdapter
 
     @Override
     public void onShowItemClick(int position) {
+        Nattu clickedTeacher=mTeachers.get(position);
+        String[] teacherData={clickedTeacher.getSadhanam(),clickedTeacher.getPrice(),clickedTeacher.getAlav(),
+                clickedTeacher.getPlace(),clickedTeacher.getName(),clickedTeacher.getPhone(),
+                clickedTeacher.getDesc(),clickedTeacher.getImageurl()};
+        openDetailActivity(teacherData);
     }
-    @Override
-    public void onDeleteItemClick(int position) {
-    }
+
     protected void onDestroy() {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBListener);

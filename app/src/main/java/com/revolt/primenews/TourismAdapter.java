@@ -114,9 +114,7 @@ public class TourismAdapter extends RecyclerView.Adapter<TourismAdapter.Recycler
         public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
             menu.setHeaderTitle("Select Action");
             MenuItem showItem = menu.add(Menu.NONE, 1, 1, "Show");
-            MenuItem deleteItem = menu.add(Menu.NONE, 2, 2, "Delete");
             showItem.setOnMenuItemClickListener(this);
-            deleteItem.setOnMenuItemClickListener(this);
         }
 
         @Override
@@ -127,9 +125,6 @@ public class TourismAdapter extends RecyclerView.Adapter<TourismAdapter.Recycler
                     switch (item.getItemId()) {
                         case 1:
                             mListener.onShowItemClick(position);
-                            return true;
-                        case 2:
-                            mListener.onDeleteItemClick(position);
                             return true;
                     }
                 }
@@ -143,7 +138,6 @@ public class TourismAdapter extends RecyclerView.Adapter<TourismAdapter.Recycler
     public interface OnItemClickListener {
         void onItemClick(int position);
         void onShowItemClick(int position);
-        void onDeleteItemClick(int position);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {

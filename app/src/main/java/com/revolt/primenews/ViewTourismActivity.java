@@ -87,19 +87,7 @@ public class ViewTourismActivity extends AppCompatActivity implements TourismAda
         String[] teacherData={clickedTeacher.getName(),clickedTeacher.getDescription(),clickedTeacher.getImageUrl(),clickedTeacher.getPhone()};
         openDetailActivity(teacherData);
     }
-    @Override
-    public void onDeleteItemClick(int position) {
-        Tourism selectedItem = mTeachers.get(position);
-        final String selectedKey = selectedItem.getKey();
-        StorageReference imageRef = mStorage.getReferenceFromUrl(selectedItem.getImageUrl());
-        imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                mDatabaseRef.child(selectedKey).removeValue();
-                Toast.makeText(ViewTourismActivity.this, "Item deleted", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+
     protected void onDestroy() {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBListener);

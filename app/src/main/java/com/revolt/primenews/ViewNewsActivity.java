@@ -85,10 +85,6 @@ public class ViewNewsActivity extends AppCompatActivity implements NewsAdapter.O
         String[] teacherData={clickedTeacher.getName(),clickedTeacher.getDescription(),clickedTeacher.getImageUrl()};
         openDetailActivity(teacherData);
     }
-    @Override
-    public void onDeleteItemClick(int position) {
-        Toast.makeText(this, "Invalid Action", Toast.LENGTH_SHORT).show();
-    }
     protected void onDestroy() {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBListener);
