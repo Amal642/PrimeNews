@@ -5,13 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b13b8d"
     tools:context=".MainActivity">
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/image_slider"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:layout_marginTop="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
         app:iss_auto_cycle="true"
         app:iss_delay="0"
         app:iss_period="2000"
@@ -25,204 +28,368 @@
     <TextView
         android:id="@+id/txt"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="400dp"
+        android:layout_height="20dp"
+         android:layout_below="@+id/image_slider"
         android:ellipsize="marquee"
+        android:background="#FFFFFF"
         android:focusable="true"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textColor="#0081d3"
+        android:layout_marginTop="10dp"
         android:focusableInTouchMode="true"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
         android:singleLine="true"
         android:text="Single-line text view that scrolls automatically if the text is too long to fit in the widget jbhfjksdbhfjksbfjkbskjbhajhdgbasjkdbajksdajkdfbasjkffajskfgfjkasfgksafgkasgasga"
-        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginTop="250dp"
-        android:layout_height="match_parent">
-
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_below="@+id/txt"
 
-        <Button
-            android:id="@+id/ann"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text="Announcments" />
+        android:layout_marginBottom="10dp"
 
-        <Button
-            android:id="@+id/news"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="News"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="0" />
-        <Button
-            android:id="@+id/bustime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bus Time"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="0" />
-        <Button
-            android:id="@+id/Auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Auto"
-            app:layout_column="0"
-            android:layout_marginEnd="20dp"
-            app:layout_row="1" />
-        <Button
-            android:id="@+id/Taxi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Taxi"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="1" />
-        <Button
-            android:id="@+id/Workers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Workers"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="1" />
-        <Button
-            android:id="@+id/Sevanam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sevanam"
-            app:layout_column="0"
-            android:layout_marginEnd="20dp"
-            app:layout_row="2" />
-        <Button
-            android:id="@+id/shops"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shops"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="2" />
-        <Button
-            android:id="@+id/offices"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="offices"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="2" />
-        <Button
-            android:id="@+id/emergency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Emergency"
-            app:layout_column="0"
-            android:layout_marginEnd="20dp"
-            app:layout_row="3" />
-        <Button
-            android:id="@+id/market"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Market"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="3" />
-        <Button
-            android:id="@+id/Hospital"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hospital"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="3" />
-        <Button
-            android:id="@+id/BloodBank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Blood Bank"
-            app:layout_column="0"
-            android:layout_marginEnd="20dp"
-            app:layout_row="4" />
-        <Button
-            android:id="@+id/restaurant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Restaurant"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="4" />
-        <Button
-            android:id="@+id/general"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="General"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="4" />
-        <Button
-            android:id="@+id/Theatre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Theatre"
-            app:layout_column="0"
-            android:layout_marginEnd="20dp"
-            app:layout_row="5" />
-        <Button
-            android:id="@+id/Tourism"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tourism"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="5" />
-        <Button
-            android:id="@+id/Media"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Media"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="5" />
-        <Button
-            android:id="@+id/Feedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Feedback"
-            app:layout_column="0"
-            android:layout_marginEnd="20dp"
-            app:layout_row="6" />
-        <Button
-            android:id="@+id/Links"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Links"
-            app:layout_column="1"
-            android:layout_marginEnd="20dp"
-            app:layout_row="6" />
-        <Button
-            android:id="@+id/Aboutus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="About Us"
-            app:layout_column="2"
-            android:layout_marginEnd="20dp"
-            app:layout_row="6" />
+        android:layout_marginTop="10dp">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="-5dp"
+            android:background="@drawable/curved"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/ann"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                app:layout_gravity="center"
+                android:drawableTop="@drawable/ic_announcement"
+                android:background="@drawable/but"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="അറിയിപ്പുകൾ"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                app:layout_column="0"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/news"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/but"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="വാർത്തകൾ"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                app:layout_column="1"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/bustime"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/but"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="ബസ് സമയം"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/Auto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="ഓട്ടോ"
+                app:layout_column="0"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/Taxi"
+                android:layout_marginEnd="20dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+
+                android:text="ടാക്സി"
+                app:layout_column="1"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/Workers"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="3dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="തൊഴിലാളികൾ"
+                app:layout_column="2"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/Sevanam"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="സേവനം"
+                app:layout_column="0"
+                app:layout_row="2" />
+
+            <Button
+                android:id="@+id/shops"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="ഷോപ്പുകൾ"
+                app:layout_column="1"
+                app:layout_row="2" />
+
+            <Button
+                android:id="@+id/offices"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="3dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="സ്ഥാപനങ്ങൾ"
+                app:layout_column="2"
+                app:layout_row="2" />
+
+            <Button
+                android:id="@+id/emergency"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="എമർജൻസി"
+                app:layout_column="0"
+                app:layout_row="3" />
+
+            <Button
+                android:id="@+id/market"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="നാട്ടുചന്ത"
+                app:layout_column="1"
+                app:layout_row="3" />
+
+            <Button
+                android:id="@+id/Hospital"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="3dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="ആശുപത്രി"
+                app:layout_column="2"
+                app:layout_row="3" />
+
+            <Button
+                android:id="@+id/BloodBank"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="ബ്ലഡ്‌ ബാങ്ക്"
+                app:layout_column="0"
+                app:layout_row="4" />
+
+            <Button
+                android:id="@+id/restaurant"
+                android:text="റെസ്റ്റോറന്റ്"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                app:layout_column="1"
+                app:layout_row="4" />
+
+            <Button
+                android:id="@+id/general"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="3dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="ജനറൽ"
+                app:layout_column="2"
+                app:layout_row="4" />
+
+            <Button
+                android:id="@+id/Theatre"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+
+                android:text="തീയേറ്റർ"
+                app:layout_column="0"
+                app:layout_row="5" />
+
+            <Button
+                android:id="@+id/Tourism"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                android:text="ടൂറിസം"
+                app:layout_column="1"
+                app:layout_row="5" />
+
+            <Button
+                android:id="@+id/Media"
+                android:text="മീഡിയ"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="3dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="10dp"
+                app:layout_column="2"
+                app:layout_row="5" />
+
+            <Button
+                android:id="@+id/Feedback"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="20dp"
+                android:text="ഫീഡ്ബാക്ക്"
+                app:layout_column="0"
+                app:layout_row="6" />
+
+            <Button
+                android:id="@+id/Links"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="20dp"
+                android:text="ഓൺലൈൻ ലിങ്ക്"
+                app:layout_column="1"
+                app:layout_row="6" />
+
+            <Button
+                android:id="@+id/Aboutus"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="3dp"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/but"
+                android:layout_marginBottom="20dp"
+                android:text="ഞങ്ങൾ"
+                app:layout_column="2"
+                app:layout_row="6" />
 
 
-
-
-    </androidx.gridlayout.widget.GridLayout>
+        </androidx.gridlayout.widget.GridLayout>
     </ScrollView>
 
 </RelativeLayout>
