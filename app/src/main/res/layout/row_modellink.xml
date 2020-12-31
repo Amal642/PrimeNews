@@ -18,6 +18,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="News Heading"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
             android:id="@+id/titleann"
             android:padding="5dp"
             android:textColor="@color/colorAccent" />
@@ -28,11 +33,12 @@
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/showlink"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+
+        android:background="@drawable/ic_arrow"
         android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:singleLine="true"
-        android:layout_marginLeft="300dp"/>
+        android:layout_marginLeft="340dp"/>
 </androidx.cardview.widget.CardView>

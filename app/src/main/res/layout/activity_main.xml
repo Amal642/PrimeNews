@@ -96,7 +96,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_announcement"
+                android:drawableTop="@drawable/ic_newspaper"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/but"
@@ -191,7 +191,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_worker_24"
+                android:drawableTop="@drawable/ic_worker1"
                 android:fontFamily="@font/ubuntu_bold"
                 android:background="@drawable/but"
                 android:layout_marginBottom="10dp"
@@ -216,7 +216,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_announcement"
+                android:drawableTop="@drawable/ic_helpinghand"
                 app:layout_column="0"
                 app:layout_row="2" />
 
@@ -281,7 +281,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_announcement"
+                android:drawableTop="@drawable/ic_siren"
                 app:layout_column="0"
                 app:layout_row="3" />
 
@@ -341,7 +341,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_announcement"
+                android:drawableTop="@drawable/ic_blood"
                 android:fontFamily="@font/ubuntu_bold"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/but"
@@ -454,7 +454,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_announcement"
+                android:drawableTop="@drawable/ic_media"
                 android:fontFamily="@font/ubuntu_bold"
                 android:background="@drawable/but"
                 app:layout_column="2"
@@ -477,7 +477,7 @@
                 android:paddingBottom="2dp"
                 android:foregroundGravity="center"
                 app:layout_gravity="center"
-                android:drawableTop="@drawable/ic_announcement"
+                android:drawableTop="@drawable/ic_feed1"
                 app:layout_column="0"
                 app:layout_row="6" />
 

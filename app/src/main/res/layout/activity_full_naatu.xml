@@ -28,7 +28,7 @@
                 <ImageView
                     android:id="@+id/teacherDetailImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="250dp"
                     android:padding="5dp"
                     android:layout_alignParentTop="true"
                     android:scaleType="centerCrop" />
@@ -42,6 +42,7 @@
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="#ffffff"
                     android:textSize="20dp"
+                    android:layout_marginTop="20dp"
                     android:minLines="4"
                     android:text="price" />
                 <TextView
@@ -50,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-
+                    android:textSize="20dp"
                     android:minLines="4"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="#ffffff"
@@ -61,8 +62,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-
                     android:minLines="4"
+                    android:textSize="20dp"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="#ffffff"
                     android:text="place." />
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-
+                    android:textSize="20dp"
                     android:minLines="4"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="#ffffff"
@@ -85,7 +86,7 @@
                     android:padding="5dp"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="#ffffff"
-
+                    android:textSize="20dp"
                     android:minLines="4"
                     android:text="phone no." />
                 <TextView
@@ -96,14 +97,17 @@
                     android:padding="5dp"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="#ffffff"
-
+                    android:textSize="20dp"
                     android:minLines="4"
                      />
+
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/call"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_baseline_call_24"/>
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/ic_bcall" />
 
             </LinearLayout>
         </ScrollView>
