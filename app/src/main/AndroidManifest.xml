@@ -14,50 +14,133 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".FullNaatuActivity"></activity>
-        <activity android:name=".ViewGeneralActivity" />
-        <activity android:name=".GeneralFullDetailsActivity" />
-        <activity android:name=".ViewHospitalsActivity" />
-        <activity android:name=".HospitalFullDetailsActivity" />
-        <activity android:name=".ViewShopsActivity" />
-        <activity android:name=".ShopsFullDetailsActivity" />
-        <activity android:name=".ViewSevanamActivity" />
-        <activity android:name=".SevanamFullActivity" />
-        <activity android:name=".ViewThorilaliActivity" />
-        <activity android:name=".ThorilaliFullDetailsActivity" />
-        <activity android:name=".TaxiFullDetailsActivity" />
-        <activity android:name=".ViewTaxiActivity" />
-        <activity android:name=".FullOfficeActivity" />
-        <activity android:name=".AddNattuActivity" />
-        <activity android:name=".ViewNattuActivity" />
-        <activity android:name=".AddFeedbackActivity" />
-        <activity android:name=".ViewFeedbackActivity" />
-        <activity android:name=".ViewLinksActivity" />
-        <activity android:name=".ViewAboutUsActivity" />
-        <activity android:name=".ViewOfficeActivity" />
-        <activity android:name=".FullTourismActivity" />
-        <activity android:name=".ViewTourismActivity" />
-        <activity android:name=".FullRestaurantActivity" />
-        <activity android:name=".ViewRestaurantActivity" />
-        <activity android:name=".FullTheatreActivity" />
-        <activity android:name=".ViewTheatreActivity" />
-        <activity android:name=".PoliceActivity" />
-        <activity android:name=".FireActivity" />
-        <activity android:name=".AmbulanceActivity" />
+        <activity android:name=".FullNaatuActivity"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".ViewGeneralActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".GeneralFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewHospitalsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".HospitalFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewShopsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ShopsFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewSevanamActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".SevanamFullActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewThorilaliActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ThorilaliFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".TaxiFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewTaxiActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FullOfficeActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AddNattuActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewNattuActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AddFeedbackActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewFeedbackActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewLinksActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewAboutUsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewOfficeActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FullTourismActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewTourismActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FullRestaurantActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewRestaurantActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FullTheatreActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewTheatreActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".PoliceActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FireActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AmbulanceActivity"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".ViewEmergencyActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ViewMediaActivity" />
-        <activity android:name=".ViewBloodActivity" />
-        <activity android:name=".AutoFullDetailsActivity" />
-        <activity android:name=".ViewAutoActivity" />
-        <activity android:name=".ViewAdvActivity" />
-        <activity android:name=".BusFullDetailsActivity" />
-        <activity android:name=".ViewbusStationsActivity" />
-        <activity android:name=".ViewAnnouncementActivity" />
-        <activity android:name=".FullNewsActivity" />
-        <activity android:name=".ViewNewsActivity" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewMediaActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewBloodActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AutoFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewAutoActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewAdvActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".BusFullDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewbusStationsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewAnnouncementActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".FullNewsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ViewNewsActivity"
+            android:screenOrientation="portrait"
+            />
         <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,7 +148,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            >
         </activity>
     </application>
 
