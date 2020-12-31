@@ -3,6 +3,7 @@
         android:layout_height="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".FullNaatuActivity"
+        android:background="#b13b8d"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <ScrollView
             android:layout_width="match_parent"
@@ -20,8 +21,10 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:padding="5dp"
                     android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:text="News Heading" />
+                    android:textColor="#ffffff"
+                    android:text="News Heading"
+
+                    android:fontFamily="@font/ubuntu_bold"/>
                 <ImageView
                     android:id="@+id/teacherDetailImageView"
                     android:layout_width="match_parent"
@@ -36,7 +39,9 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-                    android:textColor="#0f0f0f"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
                     android:minLines="4"
                     android:text="price" />
                 <TextView
@@ -45,8 +50,10 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-                    android:textColor="#0f0f0f"
+
                     android:minLines="4"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="#ffffff"
                     android:text="Alav" />
                 <TextView
                     android:id="@+id/place"
@@ -54,8 +61,10 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-                    android:textColor="#0f0f0f"
+
                     android:minLines="4"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="#ffffff"
                     android:text="place." />
                 <TextView
                     android:id="@+id/name"
@@ -63,8 +72,10 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-                    android:textColor="#0f0f0f"
+
                     android:minLines="4"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="#ffffff"
                     android:text="name" />
                 <TextView
                     android:id="@+id/phoneno"
@@ -72,7 +83,9 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-                    android:textColor="#0f0f0f"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="#ffffff"
+
                     android:minLines="4"
                     android:text="phone no." />
                 <TextView
@@ -81,9 +94,11 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:padding="5dp"
-                    android:textColor="#0f0f0f"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="#ffffff"
+
                     android:minLines="4"
-                    android:text="FULL HERE..........." />
+                     />
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/call"
                     android:layout_width="wrap_content"

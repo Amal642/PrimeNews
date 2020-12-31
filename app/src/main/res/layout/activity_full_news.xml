@@ -21,12 +21,15 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:padding="5dp"
                     android:textStyle="bold"
-                    android:textColor="#000000"
+                    android:fontFamily="@font/ubuntu_medium"
+
+                    android:textColor="#b13b8d"
                     android:text="News Heading" />
                 <ImageView
                     android:id="@+id/teacherDetailImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="15dp"
                     android:padding="5dp"
                     android:layout_alignParentTop="true"
                     android:scaleType="centerCrop" />
@@ -37,8 +40,10 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:padding="5dp"
-                        android:textColor="#0f0f0f"
+                        android:textColor="#0081d3"
                         android:minLines="4"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/ubuntu_regular"
                         android:text="NEWS FULL HERE..........." />
             </LinearLayout>
         </ScrollView>
