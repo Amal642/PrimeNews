@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#b13b8d"
     android:layout_height="match_parent"
     tools:context=".AddFeedbackActivity">
 
@@ -11,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please enter your Feedback"
-        android:textColor="#b13b8d"
+        android:textColor="#ffffff"
         android:fontFamily="@font/ubuntu_bold"
         android:textSize="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,9 +23,11 @@
         app:layout_constraintVertical_bias="0.062" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="  Name  "
+        android:gravity="center"
+        android:background="@drawable/emer"
         android:textColor="#000000"
         android:fontFamily="@font/ubuntu_medium"
         android:textSize="20dp"
@@ -39,36 +42,38 @@
         android:id="@+id/feedname"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:hint="   Type here..."
         android:fontFamily="@font/ubuntu_regular"
-        android:textColorHint="#AAAAAA"
+        android:hint="   Type here..."
         android:singleLine="true"
+        android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.326" />
 
     <EditText
         android:id="@+id/feedtext"
 
         android:layout_width="240dp"
         android:layout_height="170dp"
-        android:hint="     Type here...."
         android:fontFamily="@font/ubuntu_regular"
-        android:textColorHint="#AAAAAA"
+        android:hint="     Type here...."
+        android:textColorHint="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
+        app:layout_constraintVertical_bias="0.743" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Feedback"
+        android:background="@drawable/emer"
         android:fontFamily="@font/ubuntu_medium"
         android:layout_marginLeft="20dp"
         android:textColor="#000000"
@@ -85,17 +90,17 @@
         android:id="@+id/uploadfeed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   Upload   "
-        android:textSize="20dp"
+        android:background="@drawable/emer"
         android:fontFamily="@font/ubuntu_medium"
         android:gravity="center"
-        android:textColor="#ffffff"
-        android:background="@drawable/buttonba"
+        android:text="   Upload   "
+        android:textColor="#0081d3"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729" />
+        app:layout_constraintVertical_bias="0.902" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

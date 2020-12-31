@@ -11,6 +11,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="210dp"
+        android:background="@drawable/emer"
         android:layout_height="match_parent">
         <TextView
 
@@ -20,39 +21,47 @@
             android:text="Bus Name"
             android:id="@+id/busname"
             android:padding="5dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="20dp"
             android:textColor="@color/colorAccent" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="bus service"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ubuntu_regular"
             android:id="@+id/busservice"
             android:padding="5dp"
-            android:textStyle="italic"/>
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="bus service"
+            android:layout_marginTop="5dp"
             android:id="@+id/bustime"
             android:padding="5dp"
-            android:textStyle="italic"/>
+           android:fontFamily="@font/ubuntu_regular"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="bus service"
+            android:layout_marginTop="5dp"
             android:id="@+id/busclass"
             android:padding="5dp"
-            android:textStyle="italic"/>
+            android:fontFamily="@font/ubuntu_regular"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="bus service"
             android:id="@+id/busroute"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ubuntu_regular"
             android:padding="5dp"
-            android:textStyle="italic"/>
+            />
 
 
 

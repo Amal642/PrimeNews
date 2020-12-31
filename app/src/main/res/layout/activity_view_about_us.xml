@@ -18,9 +18,13 @@
 
             <TextView
                 android:id="@+id/aboutustext"
-                android:text="hi"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:text="hi"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textColor="#b13b8d"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

@@ -5,15 +5,20 @@
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="10dp"
     android:layout_height="200dp"
+    android:background="#b13b8d"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/emer"
+       >
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="5dp"
             android:id="@+id/teacherImageView"
             android:padding="5dp"
             />
@@ -27,6 +32,11 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="News Heading"
+                android:textSize="17dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/ubuntu_bold"
                 android:id="@+id/nameTextView"
                 android:padding="5dp"
                 android:textColor="@color/colorAccent" />
@@ -35,9 +45,12 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Date"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/ubuntu_regular"
                 android:id="@+id/dateTextView"
                 android:padding="5dp"
-                android:textStyle="italic"/>
+                />
 
 
 
@@ -45,23 +58,23 @@
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/shownews"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_arrow"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:singleLine="true"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/newsshare1"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_baseline_share_24"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
             android:layout_marginTop="150dp"
+          android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:singleLine="true"
-            />
-
+            android:background="@drawable/ic_share"
+            android:singleLine="true" />
 
 
     </LinearLayout>

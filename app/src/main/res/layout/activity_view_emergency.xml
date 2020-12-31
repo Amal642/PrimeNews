@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b13b8d"
     tools:context=".ViewEmergencyActivity">
 
     <Button
         android:id="@+id/ambulance"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_height="wrap_content"
-        android:text="Ambulance"
+        android:text="   Ambulance   "
+        android:fontFamily="@font/ubuntu_medium"
+        android:textColor="#0081d3"
+        android:background="@drawable/emer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,26 +25,36 @@
 
     <Button
         android:id="@+id/fire"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fire"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/emer"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="   Fire   "
+        android:textColor="#0081d3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.415" />
+        app:layout_constraintVertical_bias="0.261" />
 
     <Button
         android:id="@+id/police"
-        android:layout_width="wrap_content"
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Police"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/emer"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="   Police   "
+        android:textColor="#0081d3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.687" />
+        app:layout_constraintVertical_bias="0.404" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

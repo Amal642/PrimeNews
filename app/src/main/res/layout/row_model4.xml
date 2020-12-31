@@ -18,6 +18,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="News Heading"
+            android:textSize="20dp"
+            android:fontFamily="@font/ubuntu_bold"
             android:id="@+id/titleann"
             android:padding="5dp"
             android:textColor="@color/colorAccent" />
@@ -26,22 +28,25 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Description"
+            android:layout_marginTop="6dp"
             android:id="@+id/descann"
             android:padding="5dp"
-            android:textStyle="italic"/>
+          android:fontFamily="@font/ubuntu_regular"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Description"
+            android:layout_marginTop="5dp"
             android:id="@+id/phoneann"
             android:padding="5dp"
-            android:textStyle="italic"/>
+            android:fontFamily="@font/ubuntu_regular"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
             android:background="@drawable/ic_baseline_call_24"/>
 
 
